@@ -1,8 +1,9 @@
 package main
 
 import (
-	"deck"
 	"fmt"
+
+	"github.com/VladZheleznov/deck"
 )
 
 func main() {
