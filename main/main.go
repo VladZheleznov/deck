@@ -20,12 +20,11 @@ func main() {
 	fmt.Println(deck.SortDeck(res))
 	fmt.Println("=============================")
 	fmt.Println("=============================")
-	fmt.Println("Колода с джокерами")
+	fmt.Println("Колода с n джокерами")
 	fmt.Println(deck.AddJoker(res, 1))
 	fmt.Println("=============================")
 	fmt.Println("=============================")
-	fmt.Println(deck.AddDeck(res, 3))
-	fmt.Println("=============================")
-	fmt.Println("=============================")
+	fmt.Println("N+1 колода")
+	fmt.Println(deck.AddDeck(res, 4))
 
 }

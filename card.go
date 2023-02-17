@@ -45,16 +45,17 @@ func SortDeck(c []Card) []Card {
 	return c
 }
 
-func AddJoker(c []Card, count int) []Card {
-	for i := 0; i < count; i++ {
-		c = append(c, Card{Name: "Joker", Value: 53 + i})
+func AddJoker(c []Card, n int) []Card {
+	for i := 0; i < n; i++ {
+		c = append(c, Card{Name: "Joker", Value: len(c) + i})
 	}
 	return c
 }
 
-func AddDeck(c []Card, count int) []Card {
-	for i := 0; i < count; i++ {
-		c = append(c, SortDeck(c)...)
+func AddDeck(c []Card, n int) []Card {
+	newDeck := SortDeck(c)
+	for i := 0; i < n; i++ {
+		c = append(c, newDeck...)
 	}
 	return c
 }
